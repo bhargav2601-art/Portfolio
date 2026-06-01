@@ -30,8 +30,6 @@ import {
   Mail,
   MessageSquareQuote,
   Network,
-  Pause,
-  Play,
   Send,
   Sparkles,
   Workflow,
@@ -490,7 +488,6 @@ export function PortfolioClient() {
   const [activeDockTarget, setActiveDockTarget] = useState("about");
   const [shouldLoadHeroVideo, setShouldLoadHeroVideo] = useState(false);
   const [isHeroVideoReady, setIsHeroVideoReady] = useState(false);
-  const [isHeroVideoPlaying, setIsHeroVideoPlaying] = useState(true);
   const [shouldRenderAmbientEffects, setShouldRenderAmbientEffects] = useState(false);
   const [NeuralCanvasComponent, setNeuralCanvasComponent] =
     useState<ComponentType | null>(null);
@@ -733,12 +730,12 @@ export function PortfolioClient() {
   }, [shouldLoadHeroVideo]);
 
   useEffect(() => {
-    if (!shouldLoadHeroVideo || !isHeroVideoPlaying) return;
+    if (!shouldLoadHeroVideo) return;
 
     const video = heroVideoRef.current;
     video?.load();
-    void video?.play().catch(() => setIsHeroVideoPlaying(false));
-  }, [shouldLoadHeroVideo, isHeroVideoPlaying]);
+    void video?.play().catch(() => undefined);
+  }, [shouldLoadHeroVideo]);
 
   const sendChatMessage = async (message: string) => {
     const trimmed = message.trim();
@@ -795,19 +792,6 @@ export function PortfolioClient() {
   const handleChatSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     void sendChatMessage(chatInput);
-  };
-
-  const toggleHeroVideo = () => {
-    const video = heroVideoRef.current;
-    if (!video) return;
-
-    if (video.paused) {
-      void video.play().then(() => setIsHeroVideoPlaying(true));
-      return;
-    }
-
-    video.pause();
-    setIsHeroVideoPlaying(false);
   };
 
   const navItems = useMemo(
@@ -933,13 +917,8 @@ export function PortfolioClient() {
             loop
             playsInline
             preload="none"
-            onCanPlayThrough={() => {
-              setIsHeroVideoReady(true);
-              setIsHeroVideoPlaying(!heroVideoRef.current?.paused);
-            }}
+            onCanPlayThrough={() => setIsHeroVideoReady(true)}
             onLoadedData={() => setIsHeroVideoReady(true)}
-            onPlay={() => setIsHeroVideoPlaying(true)}
-            onPause={() => setIsHeroVideoPlaying(false)}
           >
             {shouldLoadHeroVideo && (
               <source src="/hero-ai-engineer-intro.mp4" type="video/mp4" />
@@ -948,20 +927,6 @@ export function PortfolioClient() {
           <div className="hero-video-gradient" />
           <div className="hero-video-scan" />
         </div>
-        <button
-          type="button"
-          className="hero-video-control"
-          onClick={toggleHeroVideo}
-          aria-label={isHeroVideoPlaying ? "Pause hero video" : "Play hero video"}
-          aria-pressed={!isHeroVideoPlaying}
-        >
-          {isHeroVideoPlaying ? (
-            <Pause className="size-4" />
-          ) : (
-            <Play className="size-4" />
-          )}
-          <span>{isHeroVideoPlaying ? "Pause intro" : "Play intro"}</span>
-        </button>
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="hero-copy" data-stagger>
             <p className="mb-6 inline-flex items-center rounded-full border border-cyan-300/25 bg-cyan-500/10 px-4 py-2 text-xs tracking-[0.22em] text-cyan-200">
@@ -975,11 +940,18 @@ export function PortfolioClient() {
               Automation, and intelligent workflow systems.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Button size="lg" data-magnetic className="hero-cta">
+              <a
+                href="#projects"
+                data-magnetic
+                className={buttonVariants({
+                  size: "lg",
+                  className: "hero-cta",
+                })}
+              >
                 <Sparkles className="size-4" />
                 Explore Projects
                 <ArrowRight className="size-4" />
-              </Button>
+              </a>
               <a
                 href="/bhargav-k-resume.pdf"
                 download
