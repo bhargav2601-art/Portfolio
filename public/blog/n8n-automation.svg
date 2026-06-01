@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI automation with connected workflow nodes</title>
+  <desc id="desc">A dark operations control room with API cards, message channels, and automation routing paths.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0" stop-color="#130b18"/>
+      <stop offset=".48" stop-color="#071322"/>
+      <stop offset="1" stop-color="#0f2b38"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff6b00"/>
+      <stop offset=".5" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#00d1ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0v44" fill="none" stroke="#ffffff" stroke-opacity=".05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect width="1200" height="760" fill="url(#grid)"/>
+  <g fill="#081321" stroke="#ffffff" stroke-opacity=".15" stroke-width="2">
+    <rect x="104" y="126" width="238" height="134" rx="24"/>
+    <rect x="482" y="106" width="238" height="134" rx="24"/>
+    <rect x="858" y="126" width="238" height="134" rx="24"/>
+    <rect x="278" y="438" width="238" height="134" rx="24"/>
+    <rect x="688" y="438" width="238" height="134" rx="24"/>
+    <circle cx="600" cy="366" r="100"/>
+  </g>
+  <g fill="none" stroke="url(#flow)" stroke-width="6" stroke-linecap="round" filter="url(#glow)">
+    <path d="M342 194c92 0 96 88 178 126"/>
+    <path d="M602 240v24"/>
+    <path d="M720 194c88 0 104 86 18 136"/>
+    <path d="M548 438c-74-28-112-54-146-150"/>
+    <path d="M654 438c68-28 108-56 154-150"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="224" cy="194" r="22" fill="#ff6b00"/>
+    <circle cx="600" cy="174" r="22" fill="#00d1ff"/>
+    <circle cx="978" cy="194" r="22" fill="#ff6b00"/>
+    <circle cx="397" cy="506" r="22" fill="#00d1ff"/>
+    <circle cx="807" cy="506" r="22" fill="#00d1ff"/>
+    <circle cx="600" cy="366" r="42" fill="#0f2b38" stroke="#f8fbff" stroke-opacity=".7" stroke-width="3"/>
+  </g>
+  <g stroke="#ecfeff" stroke-width="4" stroke-linecap="round" opacity=".86">
+    <path d="M154 176h136M154 216h82"/>
+    <path d="M532 156h136M532 196h94"/>
+    <path d="M908 176h136M908 216h84"/>
+    <path d="M328 488h136M328 528h92"/>
+    <path d="M738 488h136M738 528h102"/>
+    <path d="M574 366h52M600 340v52"/>
+  </g>
+  <g opacity=".42" fill="none" stroke="#00d1ff">
+    <path d="M116 638c178-100 270-74 430-36s286 2 538-114"/>
+    <path d="M116 330c164 42 328 50 492 20s284-30 476 38"/>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Real-time gesture recognition visual</title>
+  <desc id="desc">A computer vision frame showing hand landmarks, bounding boxes, waveform output, and inference overlays.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0" stop-color="#11304a"/>
+      <stop offset=".55" stop-color="#071426"/>
+      <stop offset="1" stop-color="#050816"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan" width="1200" height="42" patternUnits="userSpaceOnUse">
+      <rect width="1200" height="1" fill="#00d1ff" fill-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect width="1200" height="760" fill="url(#scan)"/>
+  <rect x="110" y="92" width="980" height="572" rx="34" fill="#07111f" fill-opacity=".74" stroke="#ffffff" stroke-opacity=".14" stroke-width="2"/>
+  <rect x="178" y="150" width="524" height="414" rx="28" fill="#0b1d2e" stroke="#00d1ff" stroke-opacity=".42" stroke-width="3"/>
+  <rect x="214" y="194" width="310" height="280" rx="32" fill="none" stroke="#00d1ff" stroke-width="3" stroke-dasharray="18 14" filter="url(#glow)"/>
+  <g fill="#00d1ff" filter="url(#glow)">
+    <circle cx="315" cy="390" r="12"/>
+    <circle cx="354" cy="315" r="12"/>
+    <circle cx="402" cy="260" r="12"/>
+    <circle cx="458" cy="226" r="12"/>
+    <circle cx="430" cy="330" r="12"/>
+    <circle cx="484" cy="292" r="12"/>
+    <circle cx="514" cy="392" r="12"/>
+    <circle cx="444" cy="442" r="12"/>
+    <circle cx="368" cy="462" r="12"/>
+  </g>
+  <g stroke="#8ff5ff" stroke-width="5" stroke-linecap="round" filter="url(#glow)">
+    <path d="M315 390l39-75 48-55 56-34"/>
+    <path d="M315 390l115-60 54-38"/>
+    <path d="M315 390l199 2"/>
+    <path d="M315 390l129 52 70-50"/>
+    <path d="M315 390l53 72"/>
+  </g>
+  <g fill="#0c1c2d" stroke="#ffffff" stroke-opacity=".14">
+    <rect x="760" y="152" width="256" height="92" rx="20"/>
+    <rect x="760" y="278" width="256" height="92" rx="20"/>
+    <rect x="760" y="404" width="256" height="126" rx="20"/>
+  </g>
+  <g fill="#eaffff">
+    <rect x="796" y="184" width="150" height="8" rx="4"/>
+    <rect x="796" y="216" width="98" height="8" rx="4"/>
+    <rect x="796" y="310" width="168" height="8" rx="4"/>
+    <rect x="796" y="342" width="72" height="8" rx="4"/>
+  </g>
+  <g transform="translate(798 448)" fill="#00d1ff" filter="url(#glow)">
+    <rect x="0" y="36" width="12" height="42" rx="6"/>
+    <rect x="28" y="12" width="12" height="66" rx="6"/>
+    <rect x="56" y="28" width="12" height="50" rx="6"/>
+    <rect x="84" y="0" width="12" height="78" rx="6"/>
+    <rect x="112" y="20" width="12" height="58" rx="6"/>
+    <rect x="140" y="44" width="12" height="34" rx="6"/>
+  </g>
+  <path d="M174 612h856" stroke="#ff6b00" stroke-width="3" stroke-opacity=".62"/>
+</svg>

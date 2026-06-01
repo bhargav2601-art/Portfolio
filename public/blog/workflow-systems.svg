@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">AI workflow automation visual</title>
+  <desc id="desc">A connected automation workflow canvas with trigger, model, router, and channel nodes on a dark technical background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#061827"/>
+      <stop offset=".5" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#160b13"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop offset="0" stop-color="#00d1ff"/>
+      <stop offset=".5" stop-color="#c4fbff"/>
+      <stop offset="1" stop-color="#ff6b00"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="dots" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" fill-opacity=".12"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <rect width="1200" height="760" fill="url(#dots)" opacity=".8"/>
+  <g fill="none" stroke="url(#line)" stroke-width="6" stroke-linecap="round" filter="url(#glow)">
+    <path d="M178 260H382c54 0 72 52 118 74"/>
+    <path d="M690 330c70-82 142-114 244-114"/>
+    <path d="M690 404c82 10 132 74 230 122"/>
+    <path d="M506 404c-72 38-138 72-234 72"/>
+  </g>
+  <g fill="#081321" stroke="#ffffff" stroke-opacity=".18" stroke-width="2">
+    <rect x="96" y="190" width="178" height="136" rx="22"/>
+    <rect x="428" y="290" width="268" height="184" rx="30"/>
+    <rect x="902" y="148" width="206" height="138" rx="22"/>
+    <rect x="900" y="472" width="210" height="138" rx="22"/>
+    <rect x="118" y="414" width="230" height="128" rx="22"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="185" cy="258" r="22" fill="#00d1ff"/>
+    <circle cx="562" cy="382" r="42" fill="#102a40" stroke="#8ff5ff" stroke-width="3"/>
+    <circle cx="1004" cy="216" r="22" fill="#ff6b00"/>
+    <circle cx="1006" cy="542" r="22" fill="#00d1ff"/>
+    <circle cx="235" cy="478" r="22" fill="#ff6b00"/>
+  </g>
+  <g stroke="#e7fbff" stroke-opacity=".82" stroke-width="4" stroke-linecap="round">
+    <path d="M532 382h60M562 352v60"/>
+    <path d="M146 236h82M146 278h54"/>
+    <path d="M952 194h96M952 236h66"/>
+    <path d="M952 520h102M952 562h72"/>
+    <path d="M166 462h132M166 500h90"/>
+  </g>
+  <g opacity=".25" fill="none" stroke="#ffffff">
+    <rect x="480" y="98" width="238" height="72" rx="18"/>
+    <rect x="486" y="586" width="292" height="70" rx="18"/>
+    <path d="M520 134h154M534 622h198"/>
+  </g>
+</svg>
