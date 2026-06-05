@@ -903,7 +903,7 @@ export function PortfolioClient() {
       >
         <div className="hero-video-stage" aria-hidden="true">
           <Image
-            src="/hero-portrait-ai-founder.png"
+            src="/profile-pic.png"
             alt=""
             fill
             sizes="100vw"
@@ -980,7 +980,7 @@ export function PortfolioClient() {
             <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-[#FF6B00]/30 via-transparent to-[#00D1FF]/30 blur-2xl" />
             <div className="hero-avatar-card relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#0B1020]/90 p-3 shadow-[0_0_90px_rgba(0,0,0,0.72)]">
               <Image
-                src="/hero-portrait-ai-founder.png"
+                src="/profile-pic.png"
                 alt="AI Engineer founder portrait"
                 width={1023}
                 height={1537}
